@@ -1,0 +1,249 @@
+/* sb sa phela hunm used kra ga  h1 .h1 html  ka  element(tag) ha lekin ya CSS ma akr h1 
+seletor hojta ha .selector means iska upper  pr design kro
+ma h1{} on  krdo ga jitni bhi designing CSS ma hoti wo sab Curly bracket ma hoti ha 
+ab mna h1{
+    color: orange;
+    /* ya hota ha decleration hota 
+    yani color kya ha property name and orange property 
+
+    agr ab mujha is ma backkground-colour istemal krna  ha to 
+    ma color:red; semilagaon ga phir background colur likho ga 
+    SemiColon(;) is must necessary
+
+    ACha jb mna kya to wo backGround pr agya is baat sabit
+    hue ka hr HTMl element aik container ma hota 
+    
+    font-family is used for wrting you want like Arial ,Cambri and so on
+       
+
+ Type selector matlab mulltiple selector hota ha
+ e.g:h1,h2,h3   
+}
+
+is sa h1 ka ander ka content red hogya
+*/
+/* h1{
+    color:red;
+    background-color: aqua;
+    font-family: Arial;
+    
+    
+} */
+/* Now we used  staric(*) is used for all Designing/selection of page
+staric ka matlab universal means pora web page ko dame styling dado
+*/
+/* {
+    color:red;
+    background-color: aqua;
+    font-family: Arial;
+    
+    
+} */
+
+/* class sector isa hum multiple element pr lga sakta ha 
+ya hr elelment ka sath class ka attribute daga 
+ab jb class ko call kra to wo sab atribte bhi aja 
+jha class lgae ha.
+acha  yha bio kya Class ki value ha ab jha Class ma bio hoga
+wo sab .bio ka zarya call kra ga ya design kra ga
+ap ka ps koi value ho is phela . phir value likha class 
+class hum multiple element pr lga sakta ha   
+
+*/
+/* .bio{
+    color:red;
+    background-color: aqua;
+    font-family: Arial; */
+  
+    
+/* id sector  used for single and and unique element
+for id we do #list ya jo bhi id ki value ho is sa phela # lga da
+*/
+/* #list{
+    color:red;
+    background-color: aqua;
+    font-family: Arial;
+      
+} */
+/* Child sector :matching the element that is child ma other
+iska lya li>a yani li ka direct child ha   a    
+wha styling apply hojaa gi(li ka ander jo a wha ya cheez aply hogi 
+kyuka a apka ps child seletor ha 
+*/
+
+/* li>a{
+    color:red;
+    background-color: aqua;
+    font-family: Arial;
+      
+} */
+
+/* Another example  */
+/* p>b{
+    color:orange;
+    background-color:bisque ;
+    font-family: Arial, Helvetica, sans-serif;
+    /* yani is b pr ga ya sb jo p ka child ha  
+}*/
+
+/* now descendant selector :Targets any <a>  or <b> elements that sit inside a <p> element, even if
+there are other elements nested between them   
+yani jha bhi <b> ya <a> hoga wha lg jaa gi ya cheeza chaha <p> ka ander ho  ya iska bhr kosi
+ or tag pr ho
+ yani direct child na ho to wo implemaent krda ga 
+ */
+ /* p i{
+    color:orange;
+    background-color:bisque ;
+    font-family: Arial, Helvetica, sans-serif;
+ } */
+
+ /* Now Adjacent sibling selector: Matches an element that is the next sibling of another
+     yani direct sbiling(Bhai bhan) hona chaya 
+ h1+p {}
+Targets the first <p> element after any <h1> element (but not other <p> elements)
+ /* 
+ 
+ /*
+
+  h1+p{
+    color:orange;
+    background-color:bisque ;
+    font-family: Arial, Helvetica, sans-serif;
+  } */
+
+  /* General sibiling Selector :Matches an element that is a sibling of another, although it
+does not have to be the directly preceding element
+    h1~p {}
+If you had two <p> elements that are siblings of an <h1> element,this rule would apply to both
+      matlab jitna bhi h1 ka baad p hoha sab pr lag jaya ga agr <b> ha bhej ma to is pr nhi lga ga     
+*/
+/* h1~p{
+    color:red;
+    background-color:aqua ;
+    font-family: Arial, Helvetica, sans-serif;
+  } */
+/* Abhi humna jo child and parent ka  relation ko dekha ha isko hum kheta ha inheritance  */
+
+
+
+/* NOw Chapter 11 colour strat */
+/* The color property allows you to specify the color of text inside an element. You can 
+specify any color in CSS in one of three ways:
+
+1.Color Names:There are 147 predefined color names that are recognized by browsers. 
+For example:DarkCyan
+h1 {
+color: DarkCyan;
+}
+color:red  (isko hum ForeGround colour bhi kheta ha jo humna upper used kiya ha )
+
+2.rgb values:These express colors in terms of how much red, green and blue are used to make it up.
+ For example: rgb(100,100,90)
+ p {
+color: ;
+}
+
+3. hex codes:These are six-digit codes that represent the amount of red,green and blue in a color,
+preceded by a pound or hash # sign.
+for example :#ee3e80
+h2 {
+color: #ee3e80;
+
+/* 
+
+
+/* color names */
+
+ /* h1{
+     color: darkcyan;
+     background-color: sandybrown;
+ }
+ p{
+     color: darkgoldenrod;
+     background-color: lightgreen;
+ } */
+
+ /* rgb :Every color on a computer screen is created by mixing amounts of red,
+green, and blue.   red,green and blue ()rgb
+
+RGB Values :Values for red, green, and blue are expressed as numbers between 0 and 255.
+rgb(102,205,170).This color is made up of the following values:
+102 red
+205 green
+170 blue
+*/
+  /* h1{
+    color: rgb(255,69,0);
+}
+p{
+    color:rgb(255,140,0) ;
+    background-color: rgb(255,189,0);
+} */
+
+
+/* 
+Hex Codes:Hex values represent values for red, green, and blue in hexadecimal code.
+#66cdaa .The value of the red, 102, is expressed as 66 in hexadecimal code. The 205 of the green is
+expressed as cd and the 170 of the blue equates to aa
+*/
+
+/* h1{
+    color: #FF4500;
+}
+p{
+    color:#FFA500 ;
+    background-color: #ffff77;
+} */
+
+
+/* opacity:opacity hamra color ki range ko light kr deti ha.
+Its value work Between Zero and 1 means point ma 
+*/
+
+/* h1{
+    background-color: darkcyan;
+    opacity: 0.9;
+}
+p{
+
+    background-color: #ffff77;
+    opacity: 1;
+} */
+
+/* hsl:isma hum teeno value sath dadeta  ha 
+hue(colour),saturation and lightness
+ya km used hota ha 
+rgb ziada used hota ha 
+*/
+
+/* h1{
+    background-color:hsl(0,20,70%);
+    }
+p{
+
+    background-color: #ffff77;
+    
+} */
+
+/* hsla  (a =alpha  same as opacity)
+agr  ma alag sa opacity nhi used krna chata hon to ma rgba ka sath dedo ga 
+a =alpha (opacity) 
+*/
+
+h1{
+    background-color:rgba(255, 160,0, 0.4);
+    }
+p{
+
+    background-color:rgba(255, 160,0, 0.9);
+    
+}
+
+
+
+
+
+
+
+

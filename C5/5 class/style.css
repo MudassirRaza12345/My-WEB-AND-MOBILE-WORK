@@ -1,0 +1,406 @@
+/* h1{
+    color: red; 
+}*/
+/*  CSS chapter #12 Text start */
+
+/* h1,h2{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+    /*  font family:The font-family property allows you to specify thetypeface that
+     should be used for any text inside the element(s) to which a CSS rule 
+     applies.
+        
+    font family is used for fontstlyle like Arial,Time New roman etc 
+        font-family: Arial, Helvetica, sans-serif;
+        teen style isla ha ka agr Arial na ho to Helvetica ajaa agr Helvitica na ho
+        to sans-serif ajaa  or agr inma sa koi bhi nhi hoga to wo default form 
+        dekha daga ga h1 ka. 
+       
+    */
+
+
+    /* 
+    font-size:The font-size property enables you to specify a size for the
+font. There are several ways to specify the size of a font. The most common are:
+
+pixels:
+Pixels are commonly used
+because they allow web
+designers very precise control
+over how much space their text
+takes up. The number of pixels is
+followed by the letters px.
+
+percentages:
+The default size of text in
+browsers is 16px. So a size of
+75% would be the equivalent of
+12px, and 200% would be 32px.
+
+If you create a rule to make all
+text inside the <body> element
+to be 75% of the default size (to
+make it 12px), and then specify
+another rule that indicates the
+content of an element inside the
+<body> element should be 75%
+size, it will be 9px (75% of the
+12px font size)
+
+
+ems:
+An em is equivalent to the width
+of a letter m.
+    
+    */
+
+/*   font-size pixel example */
+
+    /* h1,h2{
+        color: red;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 92px;
+         sab sa best pixel ha font-size ka lya  
+    } */
+/*   font-size percentage example */
+    /* h1,h2{
+        color: red;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 200%;
+        /* sab sa best pixel ha font-size ka lya 
+    } */
+/*   font-size em example */
+
+    /* h1,h2{
+        color: red;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2em;
+         sab sa best pixel ha font-size ka lya  
+    } */
+    
+/*   font-size sb sa best pixel ha  */
+    /* h1,h2{
+        color: red;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 72px;
+         sab sa best pixel ha font-size ka lya  
+    } */
+
+
+    /* Acha ksi website sa  ksi font lganana chatha ha To wo Kaise 
+    lgaa ga Ab  wo dekhta ha .
+    humna Google pr googlefonts likh kr seach kra .
+    (Apna .ttf ka fonts used kra ga ya sb sa best ha )
+    Ubuntu pr Click kra or ya open hojaa ga 
+    phir right  pr download family hoga wha pr click kraka download kr la 
+    is ma bhot sara font hoga lekin apna .ttf ki file Select krni ha 
+    isko copy kr ka is folder ma paste krda a jha apki index.hml ki file ha 
+    */
+/* hum @font-face{} is ka under hum font-family ma is font 
+ka name likh daga jo humna 5class ka folder ma rakha ha  .
+or  src  ma is jga ka link daga jha humna font rkha ha .
+
+mujha font ka link br br bnana ki zarorat nhi bs aik dfa bana ga or brbr 
+used kr sakta ha .
+*/
+/* @font-face{
+    font-family: Ubuntu;
+    src: url('font/Ubuntu-Regular.ttf');
+} */
+
+
+    /* h1,h2{
+        color: red;
+        font-family: Ubuntu;
+        font-size: 72px;
+         } */
+/* another example 
+ya sab pr  lag jaa ga 
+*=apply all
+*/
+
+/* *{
+    color: red;
+    font-family: Ubuntu;
+
+} */
+/* Agr font downlaod kya bagair isko used kr na chata ab hum wo dektha ha .
+humna Google pr googlefonts likh kr seach kra .
+buntu pr Click kra or ya open hojaa ga
+tu is ma sa koi sa font la la 
+iska baad      select this style   pr click kra 
+phir wha pr Embed pr click kra 
+is ma link dya hoga isko copy kr laga 
+is ka jha Css link ha is ka nich alink krado ga 
+like this:
+<link rel="stylesheet" href="style.css"> \
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+ab agr ma        @font-face{
+                font-family: Ubuntu;
+                src: url('font/Ubuntu-Regular.ttf');
+            }
+             na bhi banao to bhi ya Unbuntu ka font chala ga  */
+/* *{
+    color: red;
+    font-family: Ubuntu;
+    font-size: 72px;
+
+} */
+/* sb sa best ya ha ka ap download kra ka font lgaa  */
+
+
+
+/*BOLD 
+font-weight: The font-weight property
+allows you to create bold text.
+There are two values that this
+property commonly takes:
+
+normal:
+This causes text to appear at a
+normal weight.
+
+bold:
+This causes text to appear bold.
+In this example, you can see
+that the element whose class
+attribute has a value of credits
+has been bolded.
+
+*/
+
+/* h1,h2{
+    color: red;
+    
+    font-size: 72px;
+    font-weight:bold;
+
+} */
+
+
+
+/* ITALIC
+font-style:If you want to create italic text,
+you can use the font-style
+property. There are three values
+this property can take  
+
+normal:
+This causes text to appear in a
+normal style (as opposed to italic
+or oblique).
+
+italic:
+This causes text to appear italic.
+
+oblique:
+This causes text to appear
+oblique
+
+*/
+/* h1,h2{
+    color: red;
+    
+    font-size: 72px;
+    font-style:italic;
+
+} */
+
+/* UpperCase & LowerCase
+text-transform:The text-transform property
+is used to change the case of
+text giving it one of the following
+values:
+
+uppercase:
+This causes the text to appear
+uppercase.
+
+lowercase:
+This causes the text to appear
+lowercase.
+
+capitalize:
+This causes the first letter of
+each word to appear capitalized.
+
+
+*/
+
+
+/* Make all letters capital */
+/* 
+h1{
+    color: red;
+    
+    font-size: 50px;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+/* make first word capital of every letter */
+/* h2{
+    color: red;
+    
+    font-size: 50px;
+    font-weight:bold;
+    text-transform: lowercase;
+} */
+/* Make small every letter */
+/* p{
+    color: red;
+    
+    font-size: 50px;
+    font-weight:bold;
+    text-transform: capitalize;
+} */ 
+
+/* Underline & strike 
+text-decoration:The text-decoration property
+allows you to specify the
+following values:
+
+none:
+This removes any decoration
+already applied to the text.
+
+underline:
+This adds a line underneath the
+text.
+overline:
+This adds a line over the top of
+the text.
+
+line-through:
+This adds a line through words.
+
+
+
+*/
+/* h1{
+    color: red;
+    
+    font-size: 50px;
+    font-weight:bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+h2{
+    color: red;
+    
+    font-size: 50px;
+    font-weight:bold;
+    text-transform: lowercase;
+    text-decoration: none;
+    }
+    p{
+        color: red;
+        
+        font-size: 50px;
+        font-weight:bold;
+        text-transform:capitalize;
+        text-decoration:line-through;
+
+        } */
+
+        /* line-height :
+        h1  or h2 ka darmiaan space ya h2 or p ka darmian space ho isko hum 
+        line height kheta ha  
+        ya pixel or em dona ma ho sakta ha */
+
+        /* h1{
+            color: red;
+            
+            font-size: 50px;
+            font-weight:bold;
+            text-transform: uppercase;
+            text-decoration: underline;
+            line-height: 1.4cm;
+        }
+        h2{
+            color: red;
+            
+            font-size: 50px;
+            font-weight:bold;
+            text-transform: lowercase;
+            text-decoration: none;
+            line-height: 12px;
+            } */
+            /* letter-spacing, word-spacing */
+            /* word-spacing:words ka darmian space */
+            /* p{
+                word-spacing: 12px;
+            } */
+            /* letter spacing:Used to create space between letter */
+            /* p{
+                letter-spacing: 12px;
+            } */
+
+
+         /* text-align:The text-align property allows you to control the alignment of text. 
+            The property can take one of four values:
+            
+         left:This indicates that the text should be left-aligned.
+
+
+         right:This indicates that the text should be right-aligned.
+
+        center:This allows you to center text.
+
+   justify:This indicates that every line in a paragraph, except the last line,should be set to
+ take up the full width of the containing box.
+            
+            
+            
+            */
+            /* body{
+                text-align: center;
+                 isa tamam cheeza body ki centre ma hojaa gi 
+            } */
+            
+
+            /* h2{
+                text-align: left;
+            }
+            p{
+                text-align: right;
+            }
+            h3{
+                text-align: justify;
+                 right side or left side space equal krdeta ha justify 
+            } */
+/* vertical-align:work same as text align.
+it do :
+baseline
+sub
+super
+top
+text-top
+middle
+bottom
+text-bottom
+ */
+ /* h2{
+    vertical-align: top;
+}
+p{
+    vertical-align: middle;
+} */
+
+
+/* text-indent:agr first  paragraph ka baad second paragraph ko thora space daker start krna
+chata ha is ka lya hum text-indent used kra ga .
+
+The text-indent property
+allows you to indent the first
+line of text within an element.
+The amount you want the line
+indented by can be specified in
+a number of ways but is usually
+given in pixels or ems.
+ */
+
+ .pa
+ {
+     text-indent: 12px;
+ }

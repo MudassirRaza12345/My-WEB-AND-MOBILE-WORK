@@ -1,0 +1,841 @@
+/* Chapter # 12 TEXT continue */
+ 
+/* text-shadow:
+ The text-shadow property has
+become commonly used despite
+lacking support in all browsers. 
+
+The first length indicates how
+far to the left or right the shadow
+should fall.
+
+The second value indicates the
+distance to the top or bottom
+that the shadow should fall.
+
+The third value is optional and
+specifies the amount of blur that
+should be applied to the drop
+shadow.
+
+The fourth value is the color of
+the drop shadow
+*/
+
+/* h1{
+    background-color: skyblue;
+    color:darkcyan;
+    text-shadow:2px 3px 1px cyan;
+} */
+
+/* :first-letter, :first-line  :
+You can specify different values
+for the first letter or first line of
+text inside an element using
+:first-letter and
+:first-line.
+Technically these are not
+properties. They are known as
+pseudo-elements.
+*/
+/* :first letter : used to make change any first letter */
+/* h1:first-letter{
+    font-size: 50px;
+    
+}
+/* :first-line :used to make change any first line   */
+
+/* p#tr:first-line{
+    font-size: 45px;
+   }  */
+
+
+   /* :link, :visited 
+   
+   :link:-
+This allows you to set styles
+for links that have not yet been
+visit.
+   
+   :visited
+This allows you to set styles for
+links that have been clicked on. 
+     
+   */
+
+/* 
+   a.format:link {
+    color: deeppink;
+    text-decoration: underline;}
+    a:format:visited {
+    color: black;} */
+
+
+
+/* 
+Responding to Users
+
+:hover, :active, :focus
+
+:hover
+This is applied when a user
+hovers over an element with a
+pointing device such as a mouse.
+This has commonly been used
+to change the appearance of
+links and buttons when a user
+places their cursor over them. It
+is worth noting that such events
+do not work on devices that use
+touch screens (such as the iPad)
+because the screen is not able to
+tell when someone is hovering
+their finger over an element.
+
+:active
+This is applied when an element
+is being activated by a user; for
+example, when a button is being
+pressed or a link being clicked.
+Sometimes this is used to make
+a button or link feel more like it
+is being pressed by changing the
+style or position of the element
+slightly.
+
+:focus
+This is applied when an element
+has focus. Any element that
+you can interact with, such as a
+link you can click on or any form
+control can have focus
+
+
+
+:active hum button pr lgata ha jb ka 
+:focus,:hover hum button or input text field dono  pr ga sakta ha 
+               */
+/* hum na html ma abbrevation ma dekha tha ka jb kis qarib muse lakr jata tha to
+iski abbrevation show hoti thi 
+isi tarh hover bhi jb hum mouse ko word ka qareeb
+lakr jaaga to is ka ander changes show hoga 
+
+*/
+
+  /* input:hover{
+     background-color: brown;
+                   
+}  */
+/* focus : yani click kro ga mouse sa input field pr
+ to is waqt ka change ko dekha ga  */
+/* input:focus{
+    background-color:red;
+} */
+/* ya button pr kam krta ha mna button pr click kro ga to green hojaa 
+jb button sa mouse hataao ga to colour nhi show hoga  */
+/* button:active{
+    background-color: chartreuse;
+    } */
+
+
+
+    /* Attribute Selectors 
+    Selector                      Meaning                      Example
+1)Existence                       []                        p[class]
+                      Matches a specific attribute     Targets any <p> element with
+                           (whatever its value)         an attribute called class
+
+2)Equality                  [=]                        p[class="dog"]
+                Matches a specific attribute      Targets any <p> element with
+                with a specific value.            an attribute called class whose
+                                                   value is dog.
+
+3)Space               [~=]                    p[class~="dog"] 
+               Matches a specific attribute   Targets any <p> element with
+               whose value appears in a        an attribute called class whose
+               spaceseparated list of words    value is a list of space-separated
+                                              words, one of which is dog.
+
+4)Prefix                [^=]                   p[attr^="d"]
+               Matches a specific attribute   Targets any <p> element with
+               whose value begins with a       an attribute whose value begins
+                specific string                with the letter "d" 
+
+5)SubString          [*=]                           p[attr*"do"] 
+                Matches a specific attribute     Targets any <p> element with an
+               whose value contains a specific   attribute whose value contains
+                substring                        the letters "do".
+
+6)Suffix              [$=]                       p[attr$"g"]
+                 Matches a specific attribute     Targets any <p> element with an
+            whose value ends with a specific     attribute whose value ends with
+                 string .                          the letter "    
+    */
+    /* Existence  example
+    hr wo p element jis ma class lgi ha isko colour kr do
+    */
+    /* p[class]{
+
+        color: rgb(255, 51, 51);
+    } */
+/* Equality example
+jha apka ps class="cat" mojood hoga wha styling hojaa gi
+*/
+/* p[class="cat"]{
+    color: blue;
+} */
+/* space selector
+yani jha pr bhi cat mojood ha ya space ka sath cat mojood ha is
+ma styling krdo */
+/* p[class~="cat"]{
+   color:darkgreen; 
+} */
+
+
+
+
+
+
+/* chapter #13 : BOXES start */
+
+/* width,height
+By default a box is sized just big
+enough to hold its contents. To
+set your own dimensions for a
+box you can use the height and
+width properties.
+you can give height and width in px or % both. */
+
+/* agr ma chata ho prograph 70% space la page 
+to ma ya iski width ka zarya sat krdo ga  */
+/* .rer{
+    border: 2px solid red;
+     width: 70%;  yani 70% pr jga screen pr cover kra ga   
+} */
+/* .rer{
+    border: 2px solid red;
+      width: 300px;   yani km space screen pr cover kra    
+} */
+
+
+/* agr ma text braga to height br ja gi text lekin ma chat ahon wo chandge
+na ho to iskalya hum height used kra (yani height ko fixed krda ga )  */
+/* .rer{
+    background-color: rosybrown;
+    border: 2px solid red;
+    width: 300px; 
+    height: 200px;   yani height 200px ho 
+} */
+
+
+/*       Limiting Width
+
+min-width, max-width   :-
+Some page designs expand and
+shrink to fit the size of the user's
+screen. In such designs, the
+min-width property specifies
+the smallest size a box can be
+displayed at when the browser
+window is narrow, and the
+max-width property indicates
+the maximum width a box can
+stretch to when the browser
+window is wide. 
+*/
+
+/* suppose mujha koi picture lgani ha 
+jb ma picture lgao ga to wo pora page pr ajaa gi or div ki width sa bhr nikal
+jaa gi is ko ma control kro maxwidth,min width ki madad sa */
+
+/* img{
+    width: 100%;          
+    /* isna kya kia jitni width ha ki (iska parent ki wo itni cover krla ga   
+} */
+
+/* .rer{
+    background-color: rosybrown;
+    border: 2px solid red;
+    min-width: 200px; 
+    max-width: 700px;
+   
+   
+    /* min-width sa ya hoga agr hum screen ko chota kra to min 200px taq chota hoga 
+    iska baad nhi hoga.
+    
+  max-width  sa ya hoga agr hum screen ko bra  kra to man 700px taq bra hoga 
+    iska baad nhi hoga.
+
+    ab jb hum mobile ma isko khola ga to wo chota dekha ga 
+    
+    
+
+      
+} */
+
+/* LIMITING HEIGHTING
+
+min-height,max-height :-
+
+
+In the same way that you might
+want to limit the width of a box
+on a page, you may also want
+to limit the height of it. This is
+achieved using the min-height
+and max-height properties.
+
+
+*/
+/* 
+.rer{
+    background-color: rosybrown;
+    border: 2px solid red;
+    width: 300px; 
+    height: 200px;
+   
+      
+} */
+/* for example hum facebook ki baat krta ha  to
+facebook ko nhi maloom ka user kitna content likha ga
+to is cheez ko kis tarh manage ab wo dekth .
+
+ya hamra ps ziada paragraph ho or wo border bhair arha to isko 
+hum kaise sat kra ga ka .
+
+hum max-height,min-height ka through manage kra ga  
+*/
+
+/* .rer{
+    background-color: rosybrown;
+    border: 2px solid red;
+    width: 300px; 
+   min-height: 200px;
+   max-height: 300px;
+   
+   min-height kya kra ga ma jitna marzi text add kro ga 
+   iski height barti jaagi.        
+   max-height kya kra ga user ko baatada ga ka text ki height max300px
+ho is a ziada na ho agr is ziada text ho ga to wo border sa bhar chala gae
+ga .
+
+   
+      
+} */
+
+/* Acha ab max-height ka baad text border sa bhair arha ha is ko hum 
+kis tarh manage kra ga ab detha ha  */
+
+
+
+/* Overflowing Content
+
+overflow:The overflow property tells the
+browser what to do if the content
+contained within a box is larger
+than the box itself. It can have
+one of two values:
+
+hidden:
+This property simply hides any
+extra content that does not fit in
+the box.
+
+scroll:
+This property adds a scrollbar to
+the box so that users can scroll
+to see the missing content.
+
+*/
+
+/* .rer{
+    background-color: rosybrown;
+    border: 2px solid red;
+    width: 300px; 
+   min-height: 200px;
+   max-height: 300px;
+   overflow: hidden;
+   
+   /*  overflow: hidden    ya kya kra ga extra text ko hidden krda ga 
+
+} */
+
+/* .rer{
+    background-color: rosybrown;
+    border: 2px solid red;
+    width: 300px; 
+   min-height: 200px;
+   max-height: 300px;
+   overflow: scroll;
+   
+   /*overflow: scroll      ya kya kra ga  scroll create krda ga jis extra text
+   hum scroll krka dekh sakta ha 
+
+} */
+
+/* Border, Margin & Padding 
+
+1)
+Border
+Every box has a border (even if
+it is not visible or is specified to
+be 0 pixels wide). The border
+separates the edge of one box
+from another
+
+2)
+Margin
+Margins sit outside the edge
+of the border. You can set the
+width of a margin to create a
+gap between the borders of two
+adjacent boxes.
+
+3)
+Padding
+Padding is the space between
+the border of a box and any
+content contained within it.
+Adding padding can increase the
+readability of its contents.
+
+
+margin:  body or border ka darmian jo space hoti ha is ka hum kheta ha margin.
+margin   body or border ka darmian space create krta ha.
+ya do box ho inka darmian space creat krta ha .
+
+padding:border or is ka ander jo content ha in ka darmian jo space 
+hoti ha isko kheta ha padding.
+padding  border or is ka ander jo content ha in ka darmian space create krta ha . 
+ya <div> or is ka ander jo paragraph iska darmiaan space create krta ha.  
+
+*/
+
+
+
+
+/* .rer{
+    background-color: royalblue;
+    border: 2px solid red;
+}
+p{
+background-color: saddlebrown;
+border: 2px solid blue;
+padding: 12px;
+margin: 12px;
+} */
+
+
+
+
+
+/*
+ border-width:
+
+The border-width property
+is used to control the width
+of a border. The value of this
+property can either be given
+in pixels or using one of the
+following values:
+thin
+medium
+thick
+
+(You cannot use percentages
+with this property.)
+You can control the individual
+size of borders using four
+separate properties:
+border-top-width
+border-right-width
+border-bottom-width
+border-left-width
+
+You can also specify different
+widths for the four border values
+in one property, like so:
+border-width: 2px 1px 1px
+2px;
+
+The values here appear in
+clockwise order: top, right,
+bottom, left.
+*/
+
+/* e.g:1  */
+/* .rer{
+    background-color: royalblue;
+    border:  solid red; */
+     /* border-width: thick;  */
+     /* border-width: thin;  */
+    /* border-width: medium; 
+} */
+
+/* e.g:2 */
+/* .rer{
+    background-color: royalblue;
+    /*  boder ki property ha ab aik sath
+     border-width,style ,bordercolour da sakta ha  
+    border: 5px solid red;
+    }  */
+ 
+
+/* e.g:3 */
+
+/* .rer{
+    background-color: sandybrown;
+    border-width: 100px 10px 12px 10px ;
+    border:  red;
+    /* now this can be done through padding and margin 
+} */
+/*   Border Style
+border-style:
+ You can control the style of a
+border using the border-style
+property. This property can take
+the following values:
+
+1)solid: a single solid line
+
+2)dotted: a series of square dots
+(if your border is 2px wide, then
+the dots are 2px squared with a
+2px gap between each dot)
+
+3)dashed: a series of short lines
+
+4)double: two solid lines (the
+value of the border-width
+property creates the sum of the
+two lines)
+5)groove: appears to be carved
+into the page
+6)ridge: appears to stick out from
+the page
+7)inset: appears embedded into
+the page
+8)outset: looks like it is coming
+out of the screen
+9)hidden / none no border is
+shown
+
+You can individually change the
+styles of different borders using:
+border-top-style
+border-left-style
+border-right-style
+border-bottom-style */
+
+/* this is best trick for borderwidth,bordercolour and border syling  */
+
+/* .rer{
+    background-color: sandybrown;
+    border: 20px dashed red;
+    padding: 12px;
+    margin: 40px;
+    } */
+
+/*  border-color:You can specify the color of a
+border using either RGB values,
+hex codes or CSS color names .
+but today
+  Shorthand
+border:The border property allows you
+to specify the width, style and
+color of a border in one property
+(and the values should be coded
+in that specific order).
+ 
+
+we can do border-colour ,border-width,border-style together by using the
+property border shorthand    (  border:20px dashed red;)
+*/
+     /* .rer{
+        background-color: sandybrown;
+        border: 20px dashed red;
+        padding: 12px;
+        margin: 40px; } */
+        
+    /* padding:The padding property allows
+you to specify how much space
+should appear between the
+content of an element and its
+border. The value of this property is
+most often specified in pixels
+(although it is also possible to
+use percentages or ems).
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+margin:The margin property controls
+the gap between boxes. Its value
+is commonly given in pixels,
+although you may also use
+percentages or ems.
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+*/
+    
+  /*e.g#1  */
+/* .rer{
+    background-color: sandybrown;
+    border: 20px dashed red;
+    padding: 12px 15px 20px 15px;
+    margin: 40px 20px 40px 20px;
+ } */
+/* e.g#2 */
+/* .rer{
+    background-color: sandybrown;
+    border: 20px dashed red;
+    padding: 12px;
+    margin: 40px; } */
+
+/* or we can used for brining in centre we used text align:centre */
+
+/* body{
+    text-align: center;
+} */
+
+/* e.g#3 */
+
+/* .rer{
+    background-color: sandybrown;
+    border: 20px dashed red;
+    width: 50%;
+    margin:  40px 20px 40px 20px;
+    } */
+    
+    /*e.g#4  for bringing div in centre */
+    /* .rer{
+        background-color: sandybrown;
+        border: 20px dashed red;
+        width: 50%;
+        margin:  40px auto 40px auto;
+         } */
+
+  /*e.g#5  for bringing div in centre */
+  /* .rer{
+    background-color: sandybrown;
+    border: 20px dashed red;
+    width: 50%;
+    margin:  0 auto;
+     } */
+
+     /* Change Inline/Block
+
+     display:The display property allows
+you to turn an inline element
+into a block-level element or vice
+versa, and can also be used to
+hide an element from the page.
+The values this property can
+take are:
+
+inline:
+This causes a block-level
+element to act like an inline
+element.
+
+block:
+This causes an inline element to
+act like a block-level element.
+
+inline-block:
+This causes a block-level
+element to flow like an inline
+element, while retaining other
+features of a block-level element.
+
+none:
+This hides an element from the
+page.  In this case, the element
+acts as though it is not on the
+page at all (although a user could
+still see the content of the box if
+they used the view source option
+in their browser).  
+
+*/
+/* e.g#1 make every element in  line  */
+/* li{
+    display: inline;
+   margin-right: 12px; 
+} */
+
+/* e.g#2 make every element hide  */
+/* li{
+    background-color: salmon;
+    height: 20px;
+    margin: 5px;
+    padding: 10px;
+    display: inline; 
+    /* ziada tr hum inline used krta ha  
+} */
+/* e.g# 3 */
+/* li{
+    background-color: salmon;
+    height: 20px;
+    margin: 5px;
+    padding: 10px;
+    display: inline-block; 
+} */
+/* e.g# 4 */
+/* li{
+    background-color: salmon;
+    height: 20px;
+    margin: 5px;
+    padding: 10px;
+    display: none; 
+} */
+
+/* Hiding Boxes
+
+visibility:The visibility property allows
+you to hide boxes from users
+but It leaves a space where the
+element would have been.
+This property can take two
+values:
+
+hidden:
+This hides the element.
+visible:
+This shows the element.
+
+If the visibility of an element
+is set to hidden, a blank space
+will appear in its place.
+If you do not want a blank space
+to appear, then you should use
+the display property with
+a value of none instead (as
+covered on the previous page)
+
+*/
+
+
+/* li{
+    background-color: salmon;
+    height: 20px;
+    margin: 5px;
+    padding: 10px;
+    display: inline;
+ } */
+ /* .hide{
+     visibility: hidden;
+     /* ya space jo element hidden ha iski 
+ } */
+
+/* .hide{
+    display: none;
+    /* ya space nhi da ga darmiann ma 
+} */
+/* .hide{
+    display: visible;
+    
+} */
+/* or */
+/* .hide{
+    visibility: visible;
+    
+} */
+/* both doing same work */
+
+
+
+
+/* Box Shadows
+
+box-shadow:The box-shadow property
+allows you to add a drop shadow
+around a box. It works just like
+the text-shadow property that
+you met on page 288. It must
+use at least the first of these two
+values as well as a color:
+
+Horizontal offset:
+Negative values position the
+shadow to the left of the box.
+Vertical offset
+Negative values position the
+shadow to the top of the box.
+Blur distance
+If omitted, the shadow is a solid
+line like a border.
+
+Spread of shadow:
+If used, a positive value will
+cause the shadow to expand in
+all directions, and a negative
+value will make it contract.
+
+The inset keyword can also
+be used before these values to
+create an inner-shadow.
+
+*/
+/* h1{
+    text-align: center;
+    color: brown;
+    text-shadow: 2px 2px 5px black; 
+    /* first and second property represent left and right size and third represent
+    how much shadow blur and last represent colour you want for  shadow .
+    
+}
+div{
+    border: 2px  solid crimson;
+    box-shadow: 2px 2px 5px gray ;
+
+} */
+
+/* border-radius:CSS3 introduces the ability to
+create rounded corners on any
+box, using a property called
+border-radius. The value
+indicates the size of the radius
+in pixels.
+used for round the border */
+
+h1{
+    text-align: center;
+    color: brown;
+    text-shadow: 2px 2px 5px black; 
+    /* first and second property represent left and right size and third represent
+    how much shadow blur and last represent colour you want for  shadow .
+    */
+}
+div{
+    border: 2px  solid crimson;
+    box-shadow: 2px 2px 5px gray ;
+/* box shadow is used to give shadow to box */
+    border-radius: 50px;
+    /* used for round the border */
+
+}
+
+/* Elliptical Shapes
+border-radius:To create more complex shapes,
+you can specify different
+distances for the horizontal and
+the vertical parts of the rounded
+corners.
+for example humko top,right,bottom and left sa border ko thora round krna ho to hum is ko used kra ga */
+
+
+h1{
+    text-align: center;
+    color: brown;
+    text-shadow: 2px 2px 5px black;
+}
+div{
+    border: 2px  solid crimson;
+    box-shadow: 2px 2px 5px gray ;
+    border-radius: 40px 20px 40px 20px;
+}

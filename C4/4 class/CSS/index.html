@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS start</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        h1,ul{
+            background-color:greenyellow;
+            }
+    </style> -->
+</head>
+
+<body>
+    <title> CSS start</title>
+    <!-- for start html we used index.html 
+   isi tarh CSS ko start krna ka lia hum style.css used krta ha  
+   -->
+    <!-- There are three kind of css used
+   1:External Css:this standard It is is best practice -->
+     <!-- ma sab sa phela link likho ga enter press kra ga  
+    head ma to ya create ho jaa ga.  <link rel="stylesheet" href="">
+     href ma  hum likhna ka ma html ka page ko css ka page sa link kraha hon 
+     we write style.css   <link rel="stylesheet" href="style.css">
+    hum ctrl press krka "style.css" pr right click kra to hum sa poucha ga ka ya file create krni ha
+    OR
+    new file laker style.css bna sakta ha 
+    ab agr ma ctrl daba kr style.css pr click kro ga to is page pr chala jao ga 
+rel
+This specifies the relationship between the HTML page and the file it is linked to. The value
+should be stylesheet when linking to a CSS file.
+    -->
+ <!-- 2:Internal CSS kya kheta ka ap 
+    <style> 
+        h1{
+            background-color:blue
+        }
+        ya bhi ap head   ka tag ma kra ga ma kra ga 
+        Acha  agr ma multiple pr colour krna  chata hon to ma
+        h1 , ul{
+            background-color: greenyeelow
+        }   
+
+    note:Internal CSS   ko istemal krna standard nhi ha 
+
+    3:Inline CSS kya khta ha ka ap apna ksi bhi element ka ander attribute lgata
+style ka is ka ander ka colour bta deta ha 
+ <h1 style="color: hotpink;">  Bio data</h1>
+
+ note:Inline CSS ko particular line ka ander used krta ha butsub sa
+ best External CSS ha
+          -->
+          <!-- Now we used External CSS -->
+
+<!-- 
+
+Selector                Meaning                  Example
+Universal Selector:   Applies to all elements      * {}
+                     in the document.           Targets all elements on the page.
+Type Selector:       Matches element names.     h1, h2, h3 {}Targets the <h1>
+                                                 <h2> and <h3>elements.       
+Class Selector:     Matches an element whose   .note {}
+                    class attribute has a       Targets any element whose 
+                    value that matches the      class attribute has a value 
+                    one specified after       of note.
+                    the period (or full stop)       p.note {}
+                    symbol.                     Targets only <p> elements
+                                                whose class attribute has a
+                                                value of note
+
+ID Selector:        Matches an element whose     #introduction {}
+                 id attribute has a value that    Targets the element whose 
+                 matches the one specified after   id attribute has a value of 
+                   the pound or hash symbol.         introduction.
+
+Child Selector:   Matches an element that is a     li>a {}
+                     direct child of another.        Targets any <a> elements that
+                                                     are children of an <li> element 
+                                                      (but not other <a> elements in
+                                                    the page)
+                                                    
+Adjacent Sibiling     Matches an element that is the     h1+p {}
+sector:               next sibling of another           Targets the first <p> element                                        
+                                                           after any <h1> element (but not 
+                                                            other <p> elements)
+Descendant Selector:   Matches an element that is a         p a {}
+                       descendent of another specified      Targets any <a> elements that 
+                       element (not just a direct child     sit inside a <p> element, even if 
+                       of  that element)                    there are other elements nested 
+                                                             between them.
+
+General Sibling       Matches an element that is a          h1~p {}
+Selector :             sibling of another, although it      If you had two <p> elements that 
+                       does not have to be the directly      are siblings of an <h1> element, 
+                       preceding element.                   this rule would apply to both
+
+ -->
+
+
+
+
+          
+   
+<!-- For styling all list we just do   <ul class="bio">
+    <div>
+        <h1 >  Bio data</h1>
+        <p class="bio">Name: <b>Mudassir</b>Raza </p>
+        <p class="bio">Age :18 </p>
+    </div>
+    <ul class="bio">
+        <li> Biology </li>
+        <li > Chemistry</li>
+        <li> physics</li>
+    </ul> -->
+    <!-- USEd For Id sector -->
+    <!-- <div>
+        <h1 >  Bio data</h1>
+        <p class ="bio">Name: <b>Mudassir</b>Raza </p>
+        <p class="bio">Age :18 </p>
+    </div> 
+    
+        <ul>
+        <li id="list"> Biology </li>
+        <li class="bio"> Chemistry</li>
+        <li> physics</li>
+    </ul> -->
+<!-- used for child selector -->
+    <!-- <div>
+        <h1 >  Bio data</h1>
+        <p class ="bio">Name: <b>Mudassir</b>Raza </p>
+        <p class="bio">Age :18 </p>
+    </div>
+    <ul>
+        <li id="list"><a href="http://gggle.com">Google</a> </li>
+        <li class="bio"> Chemistry</li>
+        <li> physics</li>
+    </ul>
+    <a href="http/:facebook.com">FaceBook</a> -->
+<!-- or -->
+<!-- <div>
+    <h1 >  Bio data</h1>
+    <p class ="bio">Name: <b>Mudassir</b>Raza </p>
+    <p class="bio">Age :18 </p>
+</div>
+<ul>
+    <li id="list">
+        <a href="http://gggle.com">Google</a><br>
+        <a href="http/:facebook.com">FaceBook</a>
+     
+    </li>
+    <li class="bio"> Chemistry</li>
+    <li> physics</li>
+</ul>
+<a href="http/:facebook.com">FaceBook</a> -->
+
+
+
+<!-- Adjacent selector :apas ma direct sibilig ho
+like h1 ka sath jo phela p wo h1 ka sibling ha   -->
+<!-- <div>
+    <h1>Bio data</h1>
+    <p>Muhammad <b>Mudassir</b>  Raza</p>
+    <p>we learn <span> <b> <i> Mobile </i></b> </span>application</p>
+    </div> -->
+
+ <!--  General Sibiling selector:yani jo direct sibiling na ho
+matlab jitna bhi h1 ka baad p hoha sab pr lag jaya ga 
+-->
+    <!-- <h1>Bio data</h1>
+     <p>Muhammad <b>Mudassir</b>  Raza</p>  -->
+     <!-- <b>Ali</b> yha b sibiling nhi ha is ma change nhi aega         -->
+    <!-- <p>we learn <span> <b> <i> Mobile </i></b> </span>application</p>
+    <p>i love Pakistan</p>
+    <p> I am Hussaini</p> --> 
+
+
+    <!-- another example -->
+    <!-- <h1>Bio data</h1>
+     <span><p>Muhammad <b>Mudassir</b>  Raza</p></span><!-- yha p direct sibiling nhi ha is ma change nhi aega  -->
+    <!--  <b>Ali</b> yha b sibiling nhi ha is ma change nhi aega -->         
+  <!--  <p>we learn <span> <b> <i> Mobile </i></b> </span>application</p>
+    <p>i love Pakistan</p>
+    <p> I am Hussaini</p> -->
+
+<!-- NOw Chapter 11 colour strat    -->
+<!-- The color property allows you to specify the color of text inside an element. You can 
+specify any color in CSS in one of three ways:
+
+1.Color Names:There are 147 predefined color names that are recognized by browsers. 
+For example:DarkCyan
+h1 {
+color: DarkCyan;
+}
+color:red  (isko hum ForeGround colour bhi kheta ha jo humna upper used kiya ha )
+
+2.rgb values:These express colors in terms of how much red, green and blue are used to make it up.
+ For example: rgb(100,100,90)
+ p {
+color: ;
+}
+
+3. hex codes:These are six-digit codes that represent the amount of red,green and blue in a color,
+preceded by a pound or hash # sign.
+for example :#ee3e80
+h2 {
+color: #ee3e80; -->
+
+    <h1>Bio data</h1>
+    <p>Muhammad Mudassir  Raza</p>
+    <p>we learn   Mobile  application</p>
+    <p>i love Pakistan</p>
+    <p> I am Hussaini</p>
+
+</body>
+
+</html>

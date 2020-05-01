@@ -1,0 +1,649 @@
+/*  chapter #15 LAYOUT START 
+    it very important chapter */
+
+    /* Key Concepts in Positioning Elements 
+    Building Blocks
+CSS treats each HTML element as if it is in its
+own box. This box will either be a block-level
+box or an inline box.
+Block-level boxes start on a new line and act as the main building blocks
+of any layout, while inline boxes flow between surrounding text. You can
+control how much space each box takes up by setting the width of the
+boxes (and sometimes the height, too). To separate boxes, you can use
+borders, margins, padding, and background colors. 
+
+Block-level elements
+start on a new line
+Examples include:
+<h1> <p> <ul> <li>
+
+
+Inline elements
+flow in between
+surrounding text
+Examples include:
+<img> <b> <i>
+    
+    
+    Containing Elements
+If one block-level element sits inside another
+block-level element then the outer box is
+known as the containing or parent element.
+It is common to group a number of elements together inside a <div>
+(or other block-level) element. For example, you might group together
+all of the elements that form the header of a site (such as the logo and
+the main navigation). The <div> element that contains this group of
+elements is then referred to as the containing element.
+
+(matlab aik div ka ander hum kafi sara element dal sakta )
+    
+    
+    
+    
+    Controlling the Position of Elements
+ CSS has the following positioning schemes that allow you to control
+the layout of a page: normal flow, relative positioning, and absolute
+positioning. You specify the positioning scheme using the position
+property in CSS.
+        
+*/
+
+/*    NORMAL FLOW 
+
+position:static    :-
+In normal flow, each block-level
+element sits on top of the next
+one. Since this is the default
+way in which browsers treat
+HTML elements, you do not
+need a CSS property to indicate
+that elements should appear
+in normal flow, but the syntax
+would be:
+
+position: static;
+
+I have not specified a width
+property for the heading
+element, so you can see how it
+stretches the width of the entire
+browser window by default.
+
+The paragraphs are restricted
+to 450 pixels wide. This shows
+how the elements in normal flow
+start on a new line even if they
+do not take up the full width of
+the browser window.
+
+(Normal Position like hum div bna leta ha y a kya khelati static position)
+
+isko hum used nhi kra rha kyu ka hamri normal ya default position ha
+ jo ksi bhi text ki hoti ha 
+*/
+
+
+/*    Relative Positioning
+
+position:relative:
+Relative positioning moves an
+element in relation to where it
+would have been in normal flow.
+
+For example, you can move it 10
+pixels lower than it would have
+been in normal flow or 20% to
+the right.
+
+You can indicate that an element
+should be relatively positioned
+using the position property
+with a value of relative.
+
+You then use the offset
+properties (top or bottom and
+left or right) to indicate how
+far to move the element from
+where it would have been in
+normal flow.
+
+To move the box up or down,
+you can use either the top or
+bottom properties.
+
+To move the box horizontally,
+you can use either the left or
+right properties.
+
+The values of the box offset
+properties are usually given in
+pixels, percentages or ems
+
+*/
+
+/* ABSOLUTE POSITION 
+
+position:absolute
+When the position property
+is given a value of absolute,
+the box is taken out of normal
+flow and no longer affects the
+position of other elements on
+the page. (They act like it is not
+there.)
+
+The box offset properties (top
+or bottom and left or right)
+specify where the element
+should appear in relation to its
+containing element.
+
+In this example, the heading has
+been positioned at the top of the
+page and 500 pixels from its left
+edge. The width of the heading is
+set to be 250 pixels wide.
+
+The width property has
+also been applied to the <p>
+elements in this example
+to prevent the text from
+overlapping and becoming
+unreadable.
+
+By default, most browsers add
+a margin to the top of the <h1>
+element. This is why there is
+a gap between the top of the
+browser and the box containing
+the <h1> element. If you wanted
+to remove this margin, you could
+add the following code to the
+<h1> element's style rules:
+margin: 0px;
+
+
+*/
+/* body{
+    background-color: lightblue;
+}
+
+.black{
+    background-color: black;
+    height: 100px;
+    width: 100px; */
+    /* display: inline; */
+    /* is sa kya sb gaib hogya 
+    ya directly is ko inline bna ddeta ha or jo humna height,width wagira di 
+    hoti ha isko remove kr deta ha  */
+    /* display: inline-block; */
+    /* ya kya krta ha jo humna  height,width wagira di hoti ha 
+    isko barqar rakhta or sath sath block level element ko inline
+    bhi krdeta ha  
+    */
+    /* margin: 5px 10px  5px 10px;/ */
+    /* isa block ka darmian space create hoggae ha 
+}
+.white{
+    background-color:white;
+    height: 100px;
+    width: 100px;
+    /* display: inline;*/
+    /* is sa kya sb gaib hogya 
+    ya directly is ko inline bna ddeta ha or jo humna height,width wagira di 
+    hoti ha isko remove kr deta ha  */
+    /* display: inline-block; */
+    /* ya kya krta ha jo humna  height,width wagira di hoti ha 
+    isko barqar rakhta or sath sath block level element ko inline
+    bhi krdeta ha  
+    */
+    /* margin: 5px 10px  5px 10px; */
+    /* isa block ka darmian space create hoggae ha 
+}
+
+
+    /* ab  mujha ghora ko white or black box lana 
+    ya hum postion ki properties sa kra ga 
+    position:relative
+    position:absolute
+    */
+    /* agr ma postion: relative  image pr lagaaon ga to hamri
+    image apni position da bhair ajaa gi or hum isko free move kr sakta
+    ha yani jha lejana chahon laga sakta hon 
+    relative kya kra ga jis position pr ha wha  sa isko left,right,top,bottom
+     kraga. 
+     position :absolute kya kra ga pori screen la la ga yani pori screen pr khi 
+     bhi la ja sakta hon 
+     yani pora div ka upper ajaa gi ya top,right ,bottom,left khi bhi la ja 
+     sakta ha 
+     */
+
+     /*
+     note:aik cheez yaad rekhni ha ka jb bhi ap CSS ma position property used kra
+     ga to ya property single kbhi nhi chala gi. isk ko sath humko 4 properties or
+     lgani hoti ha position ko control krna ka lia wo ya ha
+     1)top
+     2)bottom 
+     3)right
+     4)left
+     ya 4 properties position ko control krna ka lya istema l hoti ha 
+    */
+    /* position:absolute example */
+    /* img{
+        position: absolute;
+        top: 15px;
+        /* mana black wala box image lani ha is ka 
+        top:15px kiya or left :10px kiya ha 
+        
+        left:140px;
+        /* ab mana white wala box pr image la ni ha
+        top:15px
+        left:140px  kiya ha 
+      } */
+       
+      /* ab chata hon image is right side wala box pr aja 
+      to right sa space bra da ga 
+      */
+        /* img{
+            position: absolute;
+            top: 15px;
+            /* mana black wala box image lani ha is ka 
+            top:15px kiya or left :10px kiya ha 
+            
+            right: 190px;
+            
+      /* ab chata hon image is right side wala box pr aja 
+      to right sa space bra da ga  
+      right:190 px bra do ga 
+            
+        } */
+
+/* psition:relative  */
+/* img{
+    position: relative ;
+    top: 30px;
+    /* ya box ka nicha sa top 30px hojaaga  box upper sa nhi hoga   
+    left: 30px;
+    /* box ka nicha sa left hogga box ka upper sa nhi  
+
+
+} */
+
+
+
+
+
+
+
+    /* Fixed Positioning
+position:fixed
+
+Fixed positioning is a type
+of absolute positioning that
+requires the position property
+to have a value of fixed.
+
+It positions the element in
+relation to the browser window.
+Therefore, when a user scrolls
+down the page, it stays in the
+exact same place. It is a good
+idea to try this example in y 
+
+ya kya krti ha 
+jaise ksi bhi web pr scroll krta ha to jo hamra header hota ha 
+home ka wo fixed rehta ha cha jitn bhi scroll krla 
+wo position fixed ki waja sa hota ha  
+
+*/
+/* img{
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+} */
+
+/* OVERLAPPING ELEMENTS 
+
+z-index:When you use relative, fixed, or
+absolute positioning, boxes can
+overlap. If boxes do overlap, the
+elements that appear later in the
+HTML code sit on top of those
+that are earlier in the page.
+
+If you want to control which
+element sits on top, you can use
+the z-index property. Its value
+is a number, and the higher the
+number the closer that element
+is to the front. For example, an
+element with a z-index of 10
+will appear over the top of one
+with a z-index of 5.
+
+This example looks similar to
+the one on page 368, but it
+uses relative positioning for
+the <p> elements. Because
+the paragraphs are relatively
+positioned, by default they
+would appear over the top of the
+heading as the user scrolls down
+the page. To ensure that the
+<h1> element stays on top, we
+use the z-index property on the
+rule for the <h1> element.
+
+The z-index is sometimes
+referred to as the stacking
+context (as if the blocks have
+been stacked on top of each
+other on a z axis). If you are
+familiar with desktop publishing
+packages, it is the equivalent
+of using the 'bring to front' and
+'send to back' features.
+
+
+e.g :agr hamara koi content dosra ka upper ajaa yani 
+overlapp hoja aik dosra pr  
+
+agr position absolute ya position relative ka sath khaal raho to ya issue ata 
+jo hum z-index ki madaad sa shi kr sakta ha 
+
+*/
+
+/* .first{
+    width: 120px;
+    height: 30px;
+    background-color: salmon;
+}
+.second{
+    width: 120px;
+    height: 30px;
+    background-color: springgreen;
+    /* agr ma chata ho ya wala div upper wala div pr ajaa to ma  
+    position: absolute;
+    top:16px;
+    /* is sa kya ya div upper wala div ka upper chala gya */
+    /* ab ma asa nhi chata to is ka lya ma z-index: ; used kro ga
+    isa bachna ka lia  */
+    /* z-index: -1; */
+    /* isa ya hua ka first wala div upper agya or second wala iska peecha  
+    z-index: 1;
+    /* isa ya hua ka second wala div upper agya or first wala iska peecha  */
+    /* z-index ki property ha ya to wo 1 hoga ya -1 
+
+} */
+
+
+
+/* FLOATING ELEMENTS
+ 
+float:The float property allows you
+to take an element in normal
+flow and place it as far to the
+left or right of the containing
+element as possible.
+
+Anything else that sits inside
+the containing element will
+flow around the element that is
+floated.
+
+When you use the float
+property, you should also use the
+width property to indicate how
+wide the floated element should
+be. If you do not, results can be
+inconsistent but the box is likely
+to take up the full width of the
+containing element (just like it
+would in normal flow).
+
+note:float is important .ya bhi hamra div ya hamra box ha inki position control 
+krta ha 
+*/
+
+/* .first{
+    width: 300px;
+    height: 50px;
+    background-color: salmon;
+    float: left;
+    /* isa kya hoga agr first wala div ka baad space bacha gi to
+    second  div bhi whi sa start hojaa ga  
+} */
+
+/* .second{
+    width: 120px;
+    height: 50px;
+    background-color:springgreen; */
+    /* ab hua ya ka first wala div ka baat new line sa dosra div start hua ha
+because div block level element ha.     
+    */
+    /*lekin ma chata hon ka agr first wala div ka baad agr itni space ha ka second
+    wala div bhi first wala div ka sath ajaa to ma iska lia float ko used kro ga  
+    
+    float: left;
+    /* float: left likha ga to sab left sa start kra ga
+    float:right  da ga to sb ko right sa start kra ga
+    */
+    /* isa kya hoga agr first wala div ka baad space bacha gi to
+    second  div bhi whi sa start hojaa ga  */
+/* suppose agr aik or div bana to agr first or second div ka baad agr space
+hogi to teesara div bhi whi ajaa ga  new start hona ka bjaa
+*/
+}
+/* Clearing Floats
+clear:The clear property allows you
+to say that no element (within
+the same containing element)
+should touch the left or righthand sides of a box. It can take
+the following values:
+
+left
+The left-hand side of the box
+should not touch any other
+elements appearing in the same
+containing element.
+
+right
+The right-hand side of the
+box will not touch elements
+appearing in the same containing
+element.
+
+both
+Neither the left nor right-hand
+sides of the box will touch
+elements appearing in the same
+containing element.
+
+none
+Elements can touch either side.
+
+ */
+
+/* float sa some time kam kharab bhi ho jata ha 
+for e.g agr mna div  ka nicha aik paragraph banaya ha ab jb ma zoom out kro ga
+to paragraph bhi div ka sath first line sa start hojaa ga 
+lekin ma asa nhi chata .
+is masla ko solved kr  na ka lia css na humkko aik property di ha clear.*/
+
+/* note:jb bhi ap ka ps float ka kaam khatam hojaa to float ko clear kr daga 
+clear: both; (agr apna float:left and float:right both used ki ha isko represent kr rha ha)
+*/
+/* p{
+    clear: both;
+    /* is sa paragraph div ka sath nhi ae ga balqa iska nicha sa aega   
+} */
+/* note :float ab used nhi is ki jga  Bootstrap, media query used hoti ha 
+jis sa hamra layout responsive banta ha   */
+
+
+/* SCREEN SIZES
+Different visitors to your site will have different sized screens that show
+different amounts of information, so your design needs to be able to
+work on a range of different sized screens.
+
+iPhone 4
+Size: 3.5 inches
+Resolution: 960 x 640 pixels
+
+iPad 2
+Size: 9.7 inches
+Resolution: 1024 x 768 pixels
+
+13" MacBook (Laptop)
+Size: 13.3 inches
+Resolution: 1280 x 800 pixels
+
+27" iMac (LCD screen)
+Size: 27 inches
+Resolution: 2560 x 1440 pixels
+  */
+
+
+  /*Page Sizes\
+  
+  Because screen sizes and display resolutions vary so much, web
+designers often try to create pages of around 960-1000 pixels wide
+(since most users will be able to see designs this wide on their screens).
+
+
+
+Fixed Width Layouts
+Fixed width layout
+designs do not
+change size as the
+user increases
+or decreases
+the size of their
+browser window.
+Measurements tend
+to be given in pixels.
+
+Liquid Layouts
+Liquid layout designs
+stretch and contract
+as the user increases
+or decreases the
+size of their browser
+window. They tend to
+use percentages.
+
+NOTE:Today liquid layout used .
+    */
+
+
+
+/* Fixed layout Example from book      */
+/* body {
+    width: 960px;
+    margin: 0 auto;
+}
+#content {
+    overflow: auto;
+    height: 100%;
+}
+#nav, #feature, #footer {
+    background-color: #efefef;
+    padding: 10px;
+    margin: 10px;
+}
+.column1, .column2, .column3 {
+    background-color: #efefef;
+    width: 300px;
+    float: left;
+    margin: 10px;
+}
+li {
+    display: inline;
+    padding: 5px;
+} */
+
+
+    /* Liquid layout example from book 
+    ya pori screen cover krta 
+    note :Today website liquid layout pr banti haz.
+    */
+    /* body {
+        width: 90%;
+        margin: 0 auto;}
+
+        #content {
+            overflow: auto;
+        }
+        #nav, #feature, #footer {
+        margin: 1%;
+    }
+        .column1, .column2, .column3 {
+        width: 31.3%;
+        float: left;
+        margin: 1%;
+    }
+        .column3 {
+            margin-right: 0%;
+        }
+        li {
+        display: inline;
+        padding: 0.5em;}
+        #nav, #footer {
+        background-color: #efefef;
+        padding: 0.5em 0;}
+        #feature, .article {
+        height: 10em;
+        margin-bottom: 1em;
+        background-color: #efefef;}
+ */
+
+
+        /* A GRID-BASED LAYOUT USING 960.GS */
+        * {
+            font-family: Arial, Verdana, sans-serif;
+            color: #665544;
+            text-align: center;
+        }
+        #nav, #feature, .article, #footer {
+            background-color: #efefef;
+            margin-top: 20px;
+            padding: 10px 0px 5px 0px;
+        }
+        #feature, .article {
+            height: 100px;
+        }
+        li {
+            display: inline;
+            padding: 5px;
+        }
+/* MULTIPLE STYLE SHEET
+@import :
+Some web page authors split
+up their CSS style rules into
+separate style sheets. For
+example, they might use one
+style sheet to control the layout
+and another to control fonts,
+colors and so on.
+
+
+
+e.g suppose humna CSS ki 2 stylesheet bnae hue ha ab ma dono ko mege krna chata
+hon to ya hum @import ki madad sa kra ga .
+
+*/
+
+        
+/* @import url("index.css") */
+/* isa index.css     style.css ma hbhi ajaa gi ya merge hojaa gi */
+
+
+/* ANOTHER TECNIQUE */
+
+/* MULTIPLE STYLE SHEET LINK
+link:On this page you can see the
+other technique for including
+multiple style sheets. Inside the
+<head> element is a separate
+<link> element for each style
+sheet. */

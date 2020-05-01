@@ -1,0 +1,869 @@
+/* chapter #14 list,table and Forms start */
+/* BULLET POINT STYLES
+list-style-type:The list-style-type property
+allows you to control the shape
+or style of a bullet point (also
+known as a marker).
+
+It can be used on rules that
+apply to the <ol>, <ul>, and <li>
+elements.
+
+Unordered Lists:
+For an unordered list you can use
+the following values:
+none 
+disc
+circle
+square
+
+Ordered Lists:
+For an ordered (numbered) list
+you can use the following values:
+decimal
+1 2 3
+decimal-leading-zero
+01 02 03
+lower-alpha
+a b c
+upper-alpha
+A B C
+lower-roman
+i. ii. iii.
+upper-roman
+I II III
+*/
+/*EXAMPLE FOR ORDER LIST   */
+/* ol{
+    /* list-style-type: decimal; */
+    /* list-style-type: decimal-leading-zero; */
+    /* list-style-type: lower-alpha;*/
+    /* list-style-type: upper-alpha; */
+    /* list-style-type: lower-roman; 
+    list-style-type: upper-roman;
+} */
+
+/*Example for unorder list  */
+/* ul{
+    /* list-style-type: disc; */
+    /* list-style-type: circle; */
+    /* list-style-type: square; */
+    /* list-style: none; 
+} */
+
+/* Images for Bullets
+list-style-image:You can specify an image to act
+as a bullet point using the
+list-style-image property.
+The value starts with the letters
+url and is followed by a pair
+of parentheses. Inside the
+parentheses, the path to the
+image is given inside double
+quotes.
+This property can be used on
+rules that apply to the <ul> and
+<li> elements. */
+/* ul{
+    list-style-image: url("https://www.freepngimg.com/thumb/star/1-red-star-png-image-thumb.png");
+    
+} */
+/* this is not used today  */
+
+/* positioning maker
+list-style-position:Lists are indented into the page
+by default and the list-styleposition property indicates
+whether the marker should
+appear on the inside or the
+outside of the box containing the
+main points.
+This property can take one of
+two values:
+outside
+The marker sits to the left of the
+block of text. (This is the default
+behaviour if this property is not
+used.)
+inside
+The marker sits inside the box of
+text (which is indented).
+
+*/
+/* list style inside */
+/* ul{
+    list-style-position: inside;
+    /* used for bring bullet inside the list 
+} */
+/* ul{
+    list-style-position: outside;
+    /* used for bring bullet inside the list
+    wase by default outside hi rehta ha 
+    
+} */
+
+/* LIST SHORT HAND
+list-style:As with several of the other CSS
+properties, there is a property
+that acts as a shorthand for list
+styles. It is called list-style,
+and it allows you to express
+the markers' style, image and
+position properties in any order.
+
+list-style   ka zarya hum teeno properties lgasakta ha (style,image and properties) 
+
+*/
+ul{
+    list-style: inside square;
+}
+li{
+    padding: 10px 0 0 0;
+}
+
+
+/* TABALE PROPERTIES
+You have already met several
+properties that are commonly
+used with tables. Here we will
+put them together in a single
+example using the following:
+
+width: to set the width of the
+table
+
+padding: to set the space
+between the border of each table
+cell and its content
+
+text-transform: to convert the
+content of the table headers to
+uppercase
+
+letter-spacing, font-size:
+to add additional styling to the
+content of the table headers
+
+border-top, border-bottom:
+to set borders above and below
+the table headers
+
+text-align: to align the writing
+to the left of some table cells and
+to the right of the others
+
+
+background-color: to change
+the background color of the
+alternating table rows
+
+:hover: to highlight a table row
+when a user's mouse goes over it
+ 
+Here are some tips for styling
+tables to ensure they are clean
+and easy to follow:
+Give cells padding:
+If the text in a table cell either
+touches a border (or another
+cell), it becomes much harder to
+read. Adding padding helps to
+improve readability.
+
+Distinguish headings:
+Putting all table headings in
+bold (the default style for the
+<th> element) makes them
+easier to read. You can also
+make headings uppercase and
+then either add a background
+color or an underline to clearly
+distinguish them from content.
+
+Shade alternate rows:
+Shading every other row can
+help users follow along the lines.
+Use a subtle distinction from the
+normal color of the rows to keep
+the table looking clean.
+
+Align numerals:
+You can use the text-align
+property to align the content
+of any column that contains
+numbers to the right, so that
+large numbers are clearly
+distinguished from smaller ones.
+
+Online extra:
+There are more examples of
+using CSS to style tables in the
+tools section of the website.
+*/
+/* TODAY WE STYLING THE TABLE BY USING CSS */
+
+/* Humna universal(*) used kiya ha 
+is sa kya hoga hum  aik hi jfa font batada ga humko br br batana ki zarorat nhi hogi
+*/
+/* *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+    width: 600px;
+    margin: 20px 15px 20px 15px ;
+    /* border-collapse:collapse ;
+    used for combinig border, */
+    border-spacing: 0px 10px;
+    /* represent cell spacing and row spacing  
+    }
+th,td{
+    padding: 10px;
+    /* border or content ka darmian space 
+    border: 1px solid blue;
+}
+/* tr.even represent the after th like 2,4,6,8 in pr ya colour apply hojaa */
+/* tr.even{
+    background-color: lightskyblue;
+} */
+
+/* is sa kya hoga jb bhi mouse ksi bhi row pr lekr jaa ga to is colour 
+green hojaa ga  
+ tr:hover{
+     background-color: lime;
+ }   
+th{
+    text-transform: uppercase;
+} */
+
+/*BORDER ON EMPTY CELLS 
+
+empty-cells:If you have empty cells in
+your table, then you can use
+the empty-cells property to
+specify whether or not their
+borders should be shown.
+Since browsers treat empty cells
+in different ways, if you want to
+explicitly show or hide borders
+on any empty cells then you
+should use this property.
+It can take one of three values:
+
+show:
+This shows the borders of any
+empty cells.
+
+hide:
+This hides the borders of any
+empty cells.
+
+inherit:
+If you have one table nested
+inside another, the inherit
+value instructs the table cells to
+obey the rules of the containing
+table.
+
+
+*/
+/* AGR MA CHATHA HON KA JO JGA KHALI HA WO NA SHOW TO HUM
+mpty-cells: hide;     KRA  ga  */
+
+/* *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+    width: 600px;
+    margin: 20px 15px 20px 15px ;
+    /* border-collapse:collapse ;
+    used for combinig border, */
+    /* border-spacing: 0px 10px; */
+    /* represent cell spacing and row spacing  */
+   /* AGR MA CHATHA HON KA JO JGA KHALI HA WO NA SHOW TO HUM
+mpty-cells: hide;     KRA  ga  */
+/* AGR MA CHATHA HON KA JO JGA KHALI HA SHOW ho TO HUM
+mpty-cells: show;     KRA  ga  
+   empty-cells: show;
+    }
+th,td{
+    padding: 10px;
+    /* border or content ka darmian space 
+    border: 1px solid blue;
+}
+/* tr.even represent the after th like 2,4,6,8 in pr ya colour apply hojaa */
+/* tr.even{
+    background-color: lightskyblue;
+} */
+
+/* is sa kya hoga jb bhi mouse ksi bhi row pr lekr jaa ga to is colour 
+green hojaa ga  */
+ /* tr:hover{
+     background-color: lime;
+ }   
+th{
+    text-transform: uppercase;
+} */ 
+
+/* Gaps Between Cells
+border-spacing, border-collapse :
+The border-spacing property
+allows you to control the
+distance between adjacent cells.
+By default, browsers often leave
+a small gap between each table
+cell, so if you want to increase
+or decrease this space then
+the border-spacing property
+allows you to control the gap.
+
+The value of this property is
+usually specified in pixels. You
+can specify two values if desired
+to specify separate numbers for
+horizontal and vertical spacing.
+
+When a border has been used
+on table cells, where two cells
+meet, the width of lines would be
+twice that of the outside edges.
+It is possible to collapse adjacent
+borders to prevent this using the
+border-collapse property.
+Possible values are:
+
+collapse:
+Borders are collapsed into a
+single border where possible.
+(border-spacing will be
+ignored and cells pushed
+together, and empty-cells
+properties will be ignored.)
+
+separate:
+Borders are detached from each
+other. (border-spacing and
+empty-cells will be obeyed
+
+
+*/
+/* *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+    width: 600px;
+    margin: 20px 15px 20px 15px ;
+    /* border-collapse:collapse ;
+    used for combinig border, */
+    /* border-spacing: 0px 10px; */
+    /* represent cell spacing and row spacing  */
+   /* AGR MA CHATHA HON KA JO JGA KHALI HA WO NA SHOW TO HUM
+mpty-cells: hide;     KRA  ga  */
+/* AGR MA CHATHA HON KA JO JGA KHALI HA SHOW ho TO HUM
+mpty-cells: show;     KRA  ga  
+   empty-cells: show;
+    } */
+/* th,td{
+    padding: 10px;
+    /* border or content ka darmian space 
+    border: 1px solid blue;
+} */
+/* tr.even represent the after th like 2,4,6,8 in pr ya colour apply hojaa */
+/* tr.even{
+    background-color: lightskyblue;
+} */
+
+/* is sa kya hoga jb bhi mouse ksi bhi row pr lekr jaa ga to is colour 
+green hojaa ga  */
+ /* tr:hover{
+     background-color: lime;
+ }   
+th{
+    text-transform: uppercase;
+} */
+
+
+/* Styling Forms */
+
+
+
+/* STYLING TEXT INPUTS
+
+This example demonstrates the
+CSS properties commonly used
+with text inputs, most of which
+you have already met.
+
+font-size: sets the size of the
+text entered by the user.
+
+color: sets the text color, and
+
+background-color: sets the
+background color of the input.
+
+border: adds a border around
+the edge of the input box, and
+
+border-radius: can be used
+to create rounded corners (for
+browsers that support this
+property).
+
+The  :focus  :- pseudo-class is
+used to change the background
+color of the text input when it
+is being used, and 
+the :hover :- psuedo-class applies the same
+styles when the user hovers over
+them.
+
+background-image: adds a
+background image to the box.
+Because there is a different
+image for each input, we are
+using an attribute selector
+looking for the value of the id
+attribute on each input.
+*/
+
+/* STYLING to SUBMIT BUTTON
+Here are some properties that
+can be used to style submit
+buttons. This example builds
+on the one in the previous page,
+and the submit button inherits
+the styles set for the <input>
+element on the last page.
+
+color: is used to change the
+color of the text on the button.
+
+text-shadow: can give a 3D
+look to the text in browsers that
+support this property.
+
+border-bottom: has been used
+to make the bottom border of
+the button slightly thicker, which
+gives it a more 3D feel.
+
+background-color: can make
+the submit button stand out
+from other items around it.
+(Creating a consistent style
+for all buttons helps users
+understand how they should
+interact with the site.) A gradient
+background has been added for
+browsers that support gradients.
+Gradients are covered on
+page 419.
+
+The :hover  :- pseudo-class
+has been used to change the
+appearance of the button when
+the user hovers over it. In this
+case, the background changes,
+the text gets darker, and the
+thicker border is applied to the
+top of the button.
+ */
+/* *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    padding: 10px;
+    margin: 10px auto;
+    width: 500px;
+    /* padding give space betwwen form and its content 
+       margin  give space betwwen form and its body
+    
+}
+
+input{
+    padding: 10px;
+    margin: 5px;
+    /* margin cell ka darmian space create kr rha ha 
+    padding inputtextfield or is ka jo content likha ga in ka darmiaan 
+    space create kr rha ha 
+    
+    font-size: 1em;
+    /* font ka size normal ho
+    normal font ka size 1em=16px hota ha jo aik paragraph ka 
+    font size hota ha. 
+    
+    border: 1px solid gray;
+    /* used for change the border of input text field 
+}
+input:focus{
+    /* yani jb ma input text field ko click kro ga to iska border 
+    ka colour blue ho jaa ga 
+    */
+    /* border-color:royalblue;
+}
+button{
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+    border: none;
+    background-color:royalblue;
+    color: white;
+    border-radius: 5px;
+    text-shadow:1px 1px 40px gray;
+    box-shadow: 1px 1px 2px black;
+} */
+/* ab ma chata hon backgroud image lgaa email and
+ password pr wo kaise kra ga ab dekhta ha */
+ /* input.email{
+     background-image: url('https://cdn3.vectorstock.com/i/1000x1000/00/92/mail-envelope-icon-symbol-of-e-mail-communication-vector-19830092.jpg');
+     /* background hr jga used kr sakta cha div  ya email ya password 
+     image barhi ha is lya nhi aya ha 
+     
+     background-size: 40px;
+     /* man 35px image size rekha pr image repeat horhi  
+     background-repeat: no-repeat;
+     /* isa kya ho ga image repeat nhi hogi balqa aik dfa aegi 
+     padding: 10px 10px 10px 40px;
+     /* isa ya hua email input text ma 
+     top sa 10px, right sa 10px,bottom sa 10px and left sa 40px 
+     distance create hogya .left sa humna 40px is lya diya ha kyuka 
+     image ka size 40px ha . 
+     
+ } */
+ /* input.password{
+     background-image: url('data:image/png;base64,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');
+      /* background hr jga used kr sakta cha div  ya email ya password 
+     image barhi ha is lya nhi aya ha 
+     
+     background-size: 40px;
+     /* man 35px image size rekha pr image repeat horhi  
+     background-repeat: no-repeat;
+     /* isa kya ho ga image repeat nhi hogi balqa aik dfa aegi 
+     padding: 10px 10px 10px 40px;
+     /* isa ya hua email input text ma 
+     top sa 10px, right sa 10px,bottom sa 10px and left sa 40px 
+     distance create hogya .left sa humna 40px is lya diya ha kyuka 
+     image ka size 40px ha . 
+     
+ } */
+
+  /*Styling Fieldsets & Legends
+  
+  Fieldsets are particularly helpful
+in determining the edges of a
+form. In a long form they can
+help group together related
+information within it.
+
+The legend is used to indicate
+what information is required in
+the fieldset.
+
+Properties commonly used with
+these two elements include:
+
+width: is used to control
+the width of the fieldset. In
+this example, the width of
+the fieldset forces the form
+elements to wrap onto a new line
+in the correct place. (If it were
+wider, the items might sit on one
+line.)
+
+color :is used to control the
+color of text.
+
+background-color: is used to
+change the color behind these
+items.
+
+border: is used to control the
+appearance of the border around
+the fieldset and/or legend.
+
+border-radius: is used to
+soften the edges of these
+elements in browsers that
+support this property.
+padding can be used to add
+space inside these elements
+    
+  */
+/*   
+
+
+
+
+/* legend ko or field ki wja s a jo border create hua ha is ko syling kaise
+denge ab wo dekhte ha 
+*/
+ /* *{
+    font-family: Arial, Helvetica, sans-serif;
+} */
+/* used for styling border of field set */
+/* fieldset{
+    border-radius: 5px;
+    border: 1px solid grey;
+} */
+/* used for styling legend */
+/* legend{
+    background-color: lightgray;
+    color: royalblue;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+} */
+
+/* form{
+    padding: 10px;
+    margin: 10px auto;
+    width: 500px; */
+    /* padding give space betwwen form and its content 
+       margin  give space betwwen form and its body
+    */
+    /* text-align: center; */
+    /* is sa sb cheeza centre ma ajaagi or 
+    legend bhi ajaaga centre ma ajaga jo hum nhi chata 
+    islya hum yha text align centre define nhi kra ga balqa 
+    legend ka baad div create kra ga isko class da ga
+    phir is ma textalign centre kra ga 
+    
+}
+/* .centre{
+    text-align: center;
+} */
+
+/* input{
+    padding: 10px;
+    margin: 5px; */
+    /* margin cell ka darmian space create kr rha ha 
+    padding inputtextfield or is ka jo content likha ga in ka darmiaan 
+    space create kr rha ha 
+    
+    font-size: 1em;
+    /* font ka size normal ho
+    normal font ka size 1em=16px hota ha jo aik paragraph ka 
+    font size hota ha. 
+    
+    border: 1px solid gray;
+    /* used for change the border of input text field */
+/* }
+input:focus{
+    /* yani jb ma input text field ko click kro ga to iska border 
+    ka colour blue ho jaa ga 
+    
+    border-color:royalblue; */
+}
+/* button{
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+    border: none;
+    background-color:royalblue;
+    color: white;
+    border-radius: 5px;
+    text-shadow:1px 1px 40px gray;
+    box-shadow: 1px 1px 2px black;
+} */
+/* ab ma chata hon backgroud image lgaa email and
+ password pr wo kaise kra ga ab dekhta ha */
+ /* input.email{
+     background-image: url('https://cdn3.vectorstock.com/i/1000x1000/00/92/mail-envelope-icon-symbol-of-e-mail-communication-vector-19830092.jpg'); */
+     /* background hr jga used kr sakta cha div  ya email ya password 
+     image barhi ha is lya nhi aya ha 
+     
+     background-size: 40px;
+     /* man 35px image size rekha pr image repeat horhi  
+     background-repeat: no-repeat;
+     /* isa kya ho ga image repeat nhi hogi balqa aik dfa aegi 
+     padding: 10px 10px 10px 40px;
+     /* isa ya hua email input text ma 
+     top sa 10px, right sa 10px,bottom sa 10px and left sa 40px 
+     distance create hogya .left sa humna 40px is lya diya ha kyuka 
+     image ka size 40px ha . 
+     
+ }
+ /* input.password{
+     background-image: url('data:image/png;base64,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'); */
+      /* background hr jga used kr sakta cha div  ya email ya password 
+     image barhi ha is lya nhi aya ha 
+     
+     background-size: 40px;
+     /* man 35px image size rekha pr image repeat horhi  
+     background-repeat: no-repeat;
+     /* isa kya ho ga image repeat nhi hogi balqa aik dfa aegi 
+     padding: 10px 10px 10px 40px;
+     /* isa ya hua email input text ma 
+     top sa 10px, right sa 10px,bottom sa 10px and left sa 40px 
+     distance create hogya .left sa humna 40px is lya diya ha kyuka 
+     image ka size 40px ha . 
+     */
+ }
+
+ /* ab mna input text field ka sath  label lga dya h a 
+ label{
+     display: inline-block;
+     width: 100px;
+     text-align: right;
+ } */
+
+
+
+
+
+ /* CURSOR STYLES
+ cursor:The cursor property allows
+you to control the type of mouse
+cursor that should be displayed
+to users.
+
+For example, on a form you
+might set the cursor to be a hand
+when the user hovers over it.
+Here are the most commonly
+used values for this property:
+auto
+crosshair
+default
+pointer
+move
+text
+wait
+help
+url("cursor.gif");
+You should only use these values
+to add helpful information for
+users in places they would
+expect to see that cursor. (For
+example, using a crosshair on a
+link might confuse users because
+they are not used to seeing it.)
+ */
+/* MA APNA  MOUSE KSI BUTTON PR LEKR JATA TO WO ARROW SA HAND BAN JATA WO KAISE
+WO DEKTA HA 
+*/
+
+
+
+/* legend ko or field ki wja s a jo border create hua ha is ko syling kaise
+denge ab wo dekhte ha 
+*/
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* used for styling border of field set */
+fieldset{
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+/* used for styling legend */
+legend{
+    background-color: lightgray;
+    color: royalblue;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form{
+    padding: 10px;
+    margin: 10px auto;
+    width: 500px;
+    /* padding give space betwwen form and its content 
+       margin  give space betwwen form and its body
+    */
+    /* text-align: center; */
+    /* is sa sb cheeza centre ma ajaagi or 
+    legend bhi ajaaga centre ma ajaga jo hum nhi chata 
+    islya hum yha text align centre define nhi kra ga balqa 
+    legend ka baad div create kra ga isko class da ga
+    phir is ma textalign centre kra ga 
+    */
+}
+
+
+.centre{
+    text-align: center;
+}
+
+input{
+    padding: 10px;
+    margin: 5px;
+    /* margin cell ka darmian space create kr rha ha 
+    padding inputtextfield or is ka jo content likha ga in ka darmiaan 
+    space create kr rha ha 
+    */
+    font-size: 1em;
+    /* font ka size normal ho
+    normal font ka size 1em=16px hota ha jo aik paragraph ka 
+    font size hota ha. 
+    */
+    border: 1px solid gray;
+    /* used for change the border of input text field */
+}
+input:focus{
+    /* yani jb ma input text field ko click kro ga to iska border 
+    ka colour blue ho jaa ga 
+    */
+    border-color:royalblue;
+}
+/* MA APNA  MOUSE KSI BUTTON PR LEKR JATA TO WO ARROW SA HAND BAN JATA WO KAISE
+WO DEKTA HA 
+*/
+
+button{
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+    border: none;
+    background-color:royalblue;
+    color: white;
+    border-radius: 5px;
+    text-shadow:1px 1px 40px gray;
+    box-shadow: 1px 1px 2px black;
+    /* mostly pointer used */
+    cursor: pointer; 
+    /* cursor: move; */
+    
+}
+/* ab ma chata hon backgroud image lgaa email and
+ password pr wo kaise kra ga ab dekhta ha */
+ input.email{
+     background-image: url('https://cdn3.vectorstock.com/i/1000x1000/00/92/mail-envelope-icon-symbol-of-e-mail-communication-vector-19830092.jpg');
+     /* background hr jga used kr sakta cha div  ya email ya password 
+     image barhi ha is lya nhi aya ha 
+     */
+     background-size: 40px;
+     /* man 35px image size rekha pr image repeat horhi  */
+     background-repeat: no-repeat;
+     /* isa kya ho ga image repeat nhi hogi balqa aik dfa aegi */
+     padding: 10px 10px 10px 40px;
+     /* isa ya hua email input text ma 
+     top sa 10px, right sa 10px,bottom sa 10px and left sa 40px 
+     distance create hogya .left sa humna 40px is lya diya ha kyuka 
+     image ka size 40px ha . 
+     */
+ }
+ input.password{
+     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEUAAAD////j4+NRUVE0NDS1tbUEBAT7+/sUFBTDw8MgICCnp6fq6uru7u7y8vK5ubl+fn7Q0NCFhYVycnLd3d2fn59iYmJXV1eurq6WlpZCQkJISEglJSVQUFBoaGhdXV14eHjW1tYbGxuNjY0uLi4xMTEPDw88PDzJycmwq4BDAAAJJUlEQVR4nO2d6XqqOhSGKUpxxAEVHKqgPer9X+Gxtt27NWtgJQHDs/P9bA3JSyAJyRqCl1oVx0kSD4tpGqhKp8WpjJM4rrcJQW1XTkZhmK8yAO23slUehqOktnbURLhYTKbZgKX71iCbTq6LeppSB+FokmfbynR/OzOfjGpojX3CfL2v3nkPXblf59bbY5swP+jifUEebDNaJRzPN0cjvg8dN/OxzUZZJByfjOm+dM4sjjrWCJO1Lb671tYGHUuEcXmwCnh7IUtLjFYI49n61TLgTenMymrHCmF0sc9302VpY6VjgTBJ/6sFMAh6ewu9aE4445ee+urOnk84q5HvQ8aIhoTxvmbAIDB9Us0Ik6J2wCAozMYbI8Jk2gBgEEyNEE0I42YAb4gmD6oJIbQ1UY/S5xDaXYjSWj2DsGwQMAjK5gmvjQIGwbVpwmTVMOFWd0DVJEyaG2W+lWoi6hHGy17jhL2l3pyhR1gKP5eyLEvz/k9d551MuGS/lM0RxkvBrV/NZ4vRaPS4u5Tc/raYzVeCh6HQ2qHSIgyrtuk1Zc4l4tv/08r7A2FThEmnSnOOm7TyPV9equ1C6nSiDmGVxcz7XjaBXffvFa661mitBmHCt2RXTMSXnRQ7/sIaM4YGId+FWSS/6k0RP7hqdKKccMTe6qnWiHBTuOZex538TZQT5szQ9z7R/2CNJ9ztO4mvKSfkFqTaS+S74g199Y34+RAT5szpWSm94KPo5dJAfPgmJqSX3AOzHryLRhR/7ksJyzeq+ktfWj+gfpeqYivdQJUSRuRoZ+f8dkLWMRReTUg4Ih/SuR2bkZg8ak2Fp25Cwis1znRsndwuqFdB+qoLCSfU3dVZNcIiB2zhuy4jTOZEzXtZzaSol6EjmxJlhCFhCDSQL7ZxTYhO3NZJSO2RHkRX4kSZBZSiK4kI4yFRr/lZ5k9Rx5JD0ZaUiDAh7uxARsCKeEwPoklJRDgmpmKDkwVQxAL/KPqEEhGOiEfHtlmhtbpkfYhX2pO1v4KIbcb6+pB4DU1O+GARU6Jo2BYREmYJNifDTxHLJ9HaQkRIzPf2rXvH+Gi6lVxHRIgDbqyahN5FTU2iRot+jCqzb2s/JvYWRY0W/JZYs9l/DckXsRRcRkJIfFjYXbJ9ili4zQWXkRAS5jMNE04Fl7FDmOnuclMK8Rexrj7En9K3WgjxvQzJ+kJCiN/Tpgl3gstICNEKg20dPksLYoEhabXgt/iRjKaZBC3CWuBVcBk7hHrnhZwiT1hJnvCnPKFtecJq8oQ/5QltyxNWkyf8KU9oW80TohVassF4VI5XKGm14LchpkU9cTuSBVqj4Cr1xTZxRZ6w/fKE7ZcnbL8qEk5O6/W+64726/Wp4nkXTxhfp2Zhg+rTYHrlN2o5wlFeT1QPW7rk3Pk6TTiOSItkJ9SN6BN2krDfvKeojlLS4pQgTIauvn+PGgyJpT9OSFrLuibCwhwlTKxF7mpEJxQRI2xVD34I7UWEsHWAOCJC2K5H9FOIWxtM2H92a7UETxogIWE057IG4NQPEjYZl8WmQJcWiHCkEV7VCW2hNSpE2MZh5lPQYAMQkn5VbusNsOsBCCm3EdcFOCeqhA2FKKtHQOAzlXDGeFM7rY1qBqoS9s/PbqaBzuqsrxKSTpTOS92e+gcJKSfKFkh1v1QJK4XXcVaqC60nbJs8oSd0X57QE7ovT+gJ3Zcn9ITuyxN6QvflCT2h+/KEntB9eUJP6L48oYDw9cviWpLK4/xVRnJC2fsqUzGBgi3CXZZ+265ERVYN8txJl19llmmnGmQvK74d/9ZpViHuvi3CLPp1XD7cV2jv4Ve6xmRZIavnef/L8CCpEHffEmFePpQZR5yByn/RY81hxOWFfFMMuEvCI9EiIRizO6TNG86P9+TeXrrnwfjyfc5zwAJhCgfbGVGpZ05wmQVlfLWEvQwWjHG9OSEeTRsvA5qb3W+LRhQhOqK4OeERN/xPsDQqOzzE0gIbHt9xy/Q+GbHdlPBIOW0vEEAqwvgVQaTiTpGB700JV5RL8xg2FyND0SP25FPKDYZM+WZIeKS90kvoterSIdTBRAjbkiyTE51oSNihPcXAiP9MKlgwGe2JKUM10YyQC+YHZInpLZkyQI66HedZSLhKGBIyFb8s1GVVt2TKlOpjmrHx7Z5GCMSOfGPLqAs+PrJlXYR8+F6VsMOWUevjCfGVghkhX7M61PBl1LvC53TCzZjrJoyUoYYbaG5DzWMRdqB5JuFa+RLXIHzlc53URchHflVr5oOLqxMifyfx6cKMkI+L2tRYiu9n1DxbhOrWhM5YemAD7OBNNCTkBrm++gHV4xJQDdU1zTuXDYj4cq551QZ523BloFeKuyv1rdq6dPyCMfT5vaLjAYyhTyEmReuICINg+n1IPqZwnp0z/cWVg9tRdK4canvHlJCM+Yz4MUD+ZH+E+MmRKZ2oGNHm+zSA59QfYZuZa7xDYsxbleh42vPMfK8N9+zHfW3QWNhEPGt05cZEQrCwX4qN5FSWYOw5Rfau7sLuJONmbmPPuw/Wjcc4/BDYi0z+cnBbL+H86K2cW8zVYSAB5u3fiOo8Q+6SBx9rBfVWhmyoBzsnM9nDMUsyKdjDp/3DMcs4IhIPfepcPGQWDiscPtk6PzwM//pqLvK0SmL0835Y/ilTVjqQC45p/vcVng0rHMjZOwM+bw7DT6XbqgEYjptVfi+SrzbVksUHwWCbftVz2FQ6VLV5jt/7VMVfN1XGWyp4QvflCT2h+/KEntB9eUJP6L48oSd0X57QE7ovT+gJ3Zcn9ITuyxN6QvdVhbC9MXY/pGYIVwgRn4K2SPVj+Aeje/4DhJijTisEuCCphIBLQXsEODKohKidUhsE2F8BVrGA50tbBBnBQ3a/7ciBBCkFaCDCqJ3pLYJgANlRgbbblIOfy1pBMCBhO5OwIFaFsP198ey2aqkAWWDCsdsJ82BdYOtwxIdi9uzmakhNi0ARtvBVxEx7UT+YtiGiXii4p0+/TbPiAHezIXyZJu0Zbi6EyyLlrTVry/ItRQYZlvBlnLufhjQIujnpRMR43JVD1z80dj+Mq3UIX+JwUjwbglAxCbmMwLyP/UscR4WLa/FVEcV8wuOX/wE49KX/KR3dgwAAAABJRU5ErkJggg==');
+      /* background hr jga used kr sakta cha div  ya email ya password 
+     image barhi ha is lya nhi aya ha 
+     */
+     background-size: 40px;
+     /* man 35px image size rekha pr image repeat horhi  */
+     background-repeat: no-repeat;
+     /* isa kya ho ga image repeat nhi hogi balqa aik dfa aegi */
+     padding: 10px 10px 10px 40px;
+     /* isa ya hua email input text ma 
+     top sa 10px, right sa 10px,bottom sa 10px and left sa 40px 
+     distance create hogya .left sa humna 40px is lya diya ha kyuka 
+     image ka size 40px ha . 
+     */
+ }
+
+ /* ab mna input text field ka sath  label lga dya h a */
+ label{
+     display: inline-block;
+     width: 100px;
+     text-align: right;
+ }
