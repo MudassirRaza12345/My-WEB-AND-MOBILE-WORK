@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+     color: #fff ; 
+     text-decoration: none;
+/* 
+    border: 1px circle royalblue ;
+    border-radius: 50px; */
+}
+.bg-red{
+    background-color: #F00;
+}
+.text-white{
+    background-color: #fff;
+}
+marquee{
+    background-color: gold;
+    border: goldenrod solid 1px;
+   color: aqua;
+}
+.topbar{
+    background-color: rgb(14, 125, 216);
+    padding: 10px;
+ 
+    
+}
+ .topbar i {
+    color: #00cc00;
+    padding: 0px 10px;
+    /* for image size */
+font-size: 20px;
+
+} 
