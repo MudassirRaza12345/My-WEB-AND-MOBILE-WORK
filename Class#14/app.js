@@ -348,9 +348,152 @@ document.write(daysofborn+"<br>")
 // Fullname("ALI","RAZA")
 // //ma jitna times chaho function ko chala sakta ho
 
-function first(b,a){
-    return b + a
-}
-console.log(first(2,3))
-console.log(first(4,4))
-console.log(first(10,5))
+// function first(b,a){
+//     return b + a
+// }
+// console.log(first(2,3))
+// console.log(first(4,4))
+// console.log(first(10,5))
+
+// // function first(b,a){
+// //     return b + a
+// // }
+// // console.log(first(2,3))
+// // console.log(first(4,4))
+// // console.log(first(10,5))
+
+// var a="ghous"
+// function foo(){
+//     a="Ahmed"
+// }
+// foo()
+// console.log(a)
+//output:Ahmed
+//hum na yha a ki value update krdi ha
+//a="ghous" sa ab humna a="Ahmed" krdi a ki  value ab var a="Ahmed"
+//hogya ab jb humna fuction call kiya to value update hogae or
+//console.log(a) kiya to answer:Ahmed
+
+// var a="ghous"
+// function foo(){
+//     a="Ahmed"
+// }
+// console.log(a)
+//output:ghous
+//because humna function call nhi kiya islya ghous answer ha 
+
+// function cal(num1,opr,num2){
+//     if(opr ==="+"){
+//         return num1+num2
+//     }
+//     else if(opr ==="-"){
+//         return num1-num2
+//     }
+//     else  if(opr ==="*"){
+//         return num1*num2
+//     }
+//     else if(opr ==="/"){
+//         return num1/num2
+//     }
+//     else if(opr ==="%"){
+//         return num1+num2
+//     }
+//     else {
+//         return("Incorrect operator")
+//     }
+// }
+// var a =cal(7,"*",9)
+// var b =cal(7,"-",9)
+// var c=cal(7,"$",9)
+// console.log(a)
+// console.log(b)
+// console.log(c)
+
+// function cal(num1,opr,num2){
+//     if(opr ==="+"){
+//         return num1+num2
+//     }
+//     else if(opr ==="-"){
+//         return num1-num2
+//     }
+//     else  if(opr ==="*"){
+//         return num1*num2
+//     }
+//     else if(opr ==="/"){
+//         return num1/num2
+//     }
+//     else if(opr ==="%"){
+//         return num1+num2
+//     }
+//     else {
+//         return("Incorrect operator")
+//     }
+// }
+// var result= cal(a,b,c)
+// var a=+prompt("Enter the first number")
+// var b=prompt("Enter the operator")
+// var c=+prompt("Enter the second number")
+// console.log(result)
+
+// function foo(a,b){
+//     return a+b
+// }
+// console.log(foo(1))
+//Ans:NaN  -->not a number
+//mna a ko b ma add kraya but b ki value mna define nhi kya islya
+//mujha NaN error diya
+
+//b=3 -->Default parameter defined
+// function foo(a,b=3){
+//     return a+b
+// }
+// console.log(foo(1))
+
+// function foo(a,b=3){
+//     return a+b
+// }
+// console.log(foo(1,5))
+//our:6 because mna yha b ki value argument ma 6 di ab parameter
+//ma b=6 store hogya agr ma b ki value argument ma define nhi krta
+//to b=3 default value leta
+
+// function foo(){
+
+// }
+// console.log(foo())
+//out:undefined -->function to define ha pr isma kuch bhi return nhi horha
+//ha
+
+// var name="ghous"
+//switch-->work like function()
+//name -->work like parameter/argument
+// switch(name){
+    //case -->work like if else
+//     case "ghous":
+//coln(:)-->work like ;(semicolon)
+//         alert("Hello ghous")
+//         break
+//     case "Basit":
+//         alert("hello Basit")
+//         break
+// default -->work like esle
+//     default:
+//         alert("hello")    
+
+// }
+
+// var dayOfWk="Sat"
+// switch (dayOfWk) {
+//     case "Sat":
+//         alert("Whoopee");
+//         break;
+//     case "Sun":
+//         alert("Whoopee");
+//         break;
+//     case "Fri":
+//         alert("TGIF!");
+//         break;
+//     default:
+//         alert("Shoot me now!");
+// }
+
