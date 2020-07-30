@@ -1,0 +1,11 @@
+fieldset{
+    border-radius: 2em;
+    text-align: justify;
+}
+body {
+    background-color: burlywood;
+}
+#result{
+text-align: center;
+margin-left: 600px;
+}
