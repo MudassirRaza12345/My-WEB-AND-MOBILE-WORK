@@ -124,12 +124,13 @@
 // //in-->keyword used to check the property present or not in object
 
 
+
 //acha ab mujha check krna ha student2 ma kon kon si property(key) ha 
-var student2={
-    name:"basit",
-    roll:321,
-    school:'sayalani'
-}
+// var student2={
+//     name:"basit",
+//     roll:321,
+//     school:'sayalani'
+// }
 //ya bhi for loop ki tarh chalta ha 
 //pro variable name ha hum iska alwa koi bhi keyword used krsakta ha
 // for(var pro in student2){
@@ -149,9 +150,39 @@ var student2={
 // sayalani
 
 //acha ma chata fdhon property or iski value dono sath print ho
-for (var pro in student2){
-    console.log(pro,student2[pro])
-}
+// for (var pro in student2){
+//     console.log(pro,student2[pro])
+// }
 //OUTPUT: name basit
 //  roll 321
 //  school sayalani
+
+
+//aik or method hota ha check krna ka lia ka property ha ya nhi
+var student2={
+    name:"basit",
+    roll:321,
+    school:'sayalani'
+}
+// console.log(student2.hasOwnProperty("roll"))
+//O;true 
+//matalb student ka object ma roll number ki property ha 
+
+//dono property ma aik difference ha 
+// console.log(student2)
+//O:{name: "basit", roll: 321, school: "sayalani"}
+//name: "basit"
+//roll: 321
+//school: "sayalani"
+//__proto__: Object
+//proto ya default property ha jo javascript na bnae ha 
+
+//in keyword proto (default property jo ka java script na bnae ha)
+// wo bhi check kra 
+//console.log("__proto__" in student2)
+// O:true
+
+//jbka hasOwnProperty wo sirf student2 ki property check kra ga
+//default property nhi check kra ga 
+console.log(student2.hasOwnProperty("__proto__"))
+//O:false
