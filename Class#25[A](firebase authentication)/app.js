@@ -9,6 +9,8 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
     console.log("user ===>",user)
     //for display user name
     console.log("user ===>",user.displayName)
+     //yani login ho to is page pr ajaa
+    //  window.location="home.html"
     // ...
   }).catch(function(error) {
       console.log(error.message)
@@ -23,9 +25,11 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   });
 }
 
-
+//sign out
 const facebook_signout=() =>{
   firebase.auth().signOut().then(function() {
+    //yani logout ho to is page pr ajaa
+    window.location="login.html"
     console.log("Sign-out successful")
     // Sign-out successful.
   }).catch(function(error) {
