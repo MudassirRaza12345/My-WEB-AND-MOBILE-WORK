@@ -41,7 +41,7 @@
 // }
 
 // var age =+prompt("Enter your age is:  ","your age is");
-// if(age == 14 ){
+// if(age == 14){
 //     alert("your age is equal")
 // }
 // else if(age < 14){
@@ -132,7 +132,7 @@
 // else if(percent >= 50 && percent <= 60){
 //     alert("C")
 // }
-// else if(percent >= 40 && percent <= 500){
+// else if(percent >= 40 && percent <= 50){
 //     alert("D")
 // }
 // else if(percent >= 0 && percent <= 33){
@@ -149,7 +149,7 @@
 // document.write("Welcome " + students[0]);
 
 // var students = ["ghous","basit" ,"ali"];
-// alert("Welcome "+students);
+// alert("Welcome "+ students);
 // document.write("Welcome " + students);
 
 
@@ -157,8 +157,6 @@
 // names[0]="ghous";
 // names[1]="basit"
 // document.write(names)
-
-
 
 // var students = ["ghous","basit" ,"ali"];
 // //.pop() is used delete the element on last index of array
@@ -187,7 +185,7 @@
 // document.write(students)
 
 // var students = ["ghous","basit" ,"ali"];
-// //.shift() is used Add the element in first  of array
+// //.unshift() is used Add the element in first  of array
 // students.unshift("Raza","john")
 // document.write(students)
 
@@ -203,7 +201,7 @@
 // var students = ["ghous","basit" ,"ali"];
 // //splice is used to insert element at any place of array
 // students.splice(2,1,"Ali")
-// // here first value you write index number from you want to start
+// // here first value you write index number from you want to start 
 // //second value you  write how many element you want to delete
 // //from selecting starting point
 // //third value is which value you want to write on start point
